@@ -7,6 +7,13 @@ Vue.use(Router);
 export default new Router({
   routes: [
     {
+      path: '/test',
+      name: 'test',
+      component(resolve) {
+        require(['@/doc/test.md'], resolve);
+      },
+    },
+    {
       path: '/',
       name: 'HelloWorld',
       component: HelloWorld,
